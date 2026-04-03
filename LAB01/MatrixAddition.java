@@ -1,6 +1,6 @@
 package LAB01;
 import java.util.Scanner;
-
+// Edited for refactor requirement
 public class MatrixAddition {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
