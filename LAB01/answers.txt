@@ -1,8 +1,0 @@
-Câu hỏi 1: Điều gì xảy ra nếu người dùng chọn "Cancel"? 
-Trả lời: 
-Khi chọn Cancel, phương thức showConfirmDialog trả về giá trị số nguyên tương ứng với JOptionPane.CANCEL_OPTION.
-Trong đoạn mã mẫu, do điều kiện kiểm tra là option == JOptionPane.YES_OPTION, nên khi nhấn Cancel, chương trình sẽ coi là "không phải Yes" và hiển thị thông báo: "You've chosen: No".
-
-Câu hỏi 2: Cách tùy chỉnh các lựa chọn (ví dụ: chỉ có "Yes"/"No", hoặc "I do"/"I don't")? 
-Để chỉ hiển thị "Yes" và "No": Sử dụng tham số optionType là JOptionPane.YES_NO_OPTION trong hàm showConfirmDialog.
-Để tùy chỉnh văn bản (ví dụ "I do" và "I don't"): Sử dụng hàm JOptionPane.showOptionDialog với một mảng các chuỗi (String[]) chứa các nhãn nút bấm tự định nghĩa.
