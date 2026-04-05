@@ -52,4 +52,28 @@ public class Cart {
         addDigitalVideoDisc(dvd1);
         addDigitalVideoDisc(dvd2);
     }
+    public void print() {
+    System.out.println("***********************CART***********************");
+    System.out.println("Ordered Items:");
+    
+    for (int i = 0; i < qtyOrdered; i++) {
+        System.out.println((i + 1) + ". " + itemsOrdered[i].toString());
+    }
+    
+    System.out.println("Total cost: " + totalCost() + " $");
+    System.out.println("***************************************************");
+}
+    public void searchByTitle(String title) {
+        boolean matchFound = false;
+        System.out.println("Searching for DVD with title: " + title);
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getTitle().equalsIgnoreCase(title)) {
+                System.out.println("Result: " + itemsOrdered[i].toString());
+                matchFound = true;
+            }
+        }
+        if (!matchFound) {
+            System.out.println("Result: No match found.");
+        }
+    }
 }

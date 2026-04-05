@@ -35,4 +35,11 @@ public class DigitalVideoDisc {
     public String getDirector() { return director; }
     public int getLength() { return length; }
     public float getCost() { return cost; }
+    @Override
+    public String toString() {
+        return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
