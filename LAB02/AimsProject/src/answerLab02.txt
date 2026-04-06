@@ -1,3 +1,28 @@
+Section 9: Reading Assignment - Khi nào nên sử dụng các phương thức truy cập (getters/setters)?
+
+Nguyên tắc cốt lõi: Các phương thức truy cập (getters/setters) nên được sử dụng thận trọng để duy trì tính Đóng gói (Encapsulation). Thay vì lấy dữ liệu của đối tượng ra để xử lý bên ngoài, chúng ta nên tuân theo nguyên tắc "Tell, Don't Ask" — yêu cầu đối tượng tự thực hiện hành vi của nó.
+
+NÊN dùng khi:
+
+Data Transfer Objects (DTOs): Khi các đối tượng chỉ dùng để vận chuyển dữ liệu giữa các tầng (layers).
+
+Frameworks/Libraries: Khi sử dụng các công cụ (như Hibernate, Jackson) yêu cầu chuẩn Java Bean.
+
+Hiển thị UI: Khi cần đưa dữ liệu ra màn hình cho người dùng xem.
+
+KHÔNG NÊN dùng khi:
+
+Logic nghiệp vụ: Tránh dùng getter để lấy dữ liệu ra tính toán; hãy chuyển logic đó vào trong chính Class chứa dữ liệu.
+
+Phụ thuộc chặt chẽ (Tight Coupling): Lạm dụng setter khiến các Class khác phụ thuộc quá nhiều vào cấu trúc bên trong của đối tượng.
+
+Section 10: Câu hỏi về Constructor Overloading
+
+Câu hỏi: Nếu bạn tạo một constructor để khởi tạo DVD bằng tiêu đề (title), sau đó tạo một cái khác để khởi tạo bằng thể loại (category), JAVA có cho phép điều này không?
+
+Trả lời: KHÔNG.
+
+Lý do: Java phân biệt các constructor dựa trên Chữ ký (Signature) của chúng (số lượng, kiểu dữ liệu và thứ tự của các tham số). Vì cả title và category đều có kiểu dữ liệu là String, cả hai constructor này sẽ có cùng một chữ ký là: DigitalVideoDisc(String). Điều này gây ra lỗi "Duplicate Method" vì trình biên dịch không thể biết phải gọi cái nào khi bạn truyền vào một chuỗi String.
 14.1
 Trả lời: Nên ưu tiên sử dụng phương pháp truyền số lượng đối số tùy ý (Varargs - sử dụng dấu ...) hơn là dùng mảng ([]).
 Vì:
