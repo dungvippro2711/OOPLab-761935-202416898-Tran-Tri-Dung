@@ -1,3 +1,4 @@
+package hust.soict.hedspi.lab01;
 import javax.swing.JOptionPane;
 
 public class CalculateTwoNumbers {

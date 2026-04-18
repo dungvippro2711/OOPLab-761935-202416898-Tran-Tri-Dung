@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GarbageCreator",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.garbage.GarbageCreator",
+            "projectName": "java vs_80ba159a"
+        },
+        {
+            "type": "java",
             "name": "CartTest",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.test.cart.CartTest",
