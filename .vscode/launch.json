@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CartTest",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.cart.CartTest",
+            "projectName": "java vs_80ba159a"
+        },
+        "name",
+        "type",
+        "request",
+        "program",
+        "console"
+    ]
+}

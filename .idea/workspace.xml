@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0a77907-5356-402f-81eb-1e39cdef8ca4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/LAB02/AimsProject/src/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/Aims.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LAB02/AimsProject/src/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/cart/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LAB02/AimsProject/src/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/disc/DigitalVideoDisc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LAB02/AimsProject/src/TestPassingParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/test/disc/TestPassingParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/test/cart/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/Aims.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/Aims.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/cart/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/disc/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/aims/disc/DigitalVideoDisc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/test/disc/TestPassingParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AimsProject/src/hust/soict/hedspi/test/disc/TestPassingParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTD_CODE/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +27,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="43" />
+    <option name="cachedIndexableFilesCount" value="35" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,47 +58,60 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Aims.executor": "Run",
-    "Application.CalculateTwoNumbers.executor": "Run",
-    "Application.HelloWorld.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "topic/lab03/step3",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PC/Downloads/java vs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Aims (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Aims.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CalculateTwoNumbers.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CartTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloWorld.executor&quot;: &quot;Run&quot;,
+    &quot;Application.hust.soict.hedspi.aims.Aims.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;release/lab03&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Downloads/java vs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\Downloads\java vs\AimsProject\src\hust\soict\hedspi\test\disc" />
-      <recent name="C:\Users\PC\Downloads\java vs\AimsProject\src\hust\soict\hedspi\aims\cart" />
-      <recent name="C:\Users\PC\Downloads\java vs\AimsProject\src\hust\soict\hedspi\aims\disc" />
-      <recent name="C:\Users\PC\Downloads\java vs\AimsProject\src\hust\soict\hedspi\aims" />
-      <recent name="C:\Users\PC\Downloads\java vs\AimsProject\src" />
+      <recent name="C:\Users\PC\Downloads\java vs\OtherProjects\hust\soict\hedspi\lab02\Requirement" />
+      <recent name="C:\Users\PC\Downloads\java vs\OtherProjects\hust\soict\hedspi\lab02\Design" />
+      <recent name="C:\Users\PC\Downloads\java vs\OtherProjects\hust\soict\hedspi\lab02\src" />
+      <recent name="C:\Users\PC\Downloads\java vs\OtherProjects\hust\soict\hedspi\lab02" />
+      <recent name="C:\Users\PC\Downloads\java vs\OtherProjects\hust\soict\hedspi\lab01" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="OtherProjects.src.hust.soict.hedspi.lab01" />
       <recent name="src.hust.soict.hedspi.aims" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Aims">
+  <component name="RunManager" selected="Application.CartTest">
+    <configuration name="Aims (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Aims" />
+      <module name="java vs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Aims" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.hust.soict.hedspi.aims.Aims" />
       <module name="java vs" />
@@ -95,12 +126,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OtherProjects.src.hust.soict.hedspi.lab01.HelloWorld" />
+    <configuration name="CartTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hust.soict.hedspi.test.cart.CartTest" />
       <module name="java vs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="OtherProjects.src.hust.soict.hedspi.lab01.*" />
+          <option name="PATTERN" value="hust.soict.hedspi.test.cart.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hust.soict.hedspi.aims.Aims" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hust.soict.hedspi.aims.Aims" />
+      <module name="java vs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hust.soict.hedspi.aims.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,9 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CartTest" />
+        <item itemvalue="Application.hust.soict.hedspi.aims.Aims" />
+        <item itemvalue="Application.Aims (1)" />
         <item itemvalue="Application.Aims" />
         <item itemvalue="Application.CalculateTwoNumbers" />
-        <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +179,7 @@
       <workItem from="1776266358515" duration="2016000" />
       <workItem from="1776295494986" duration="7082000" />
       <workItem from="1776403788596" duration="8412000" />
-      <workItem from="1776499313386" duration="4996000" />
+      <workItem from="1776499313386" duration="12330000" />
     </task>
     <servers />
   </component>
