@@ -1,4 +1,4 @@
-package LAB01;
+package hust.soict.hedspi;
 // Example 5: ShowTwoNumbers.java
 import javax.swing.JOptionPane;
 public class ShowTwoNumbers {

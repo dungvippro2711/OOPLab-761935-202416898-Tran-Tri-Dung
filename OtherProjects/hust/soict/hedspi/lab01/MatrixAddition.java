@@ -1,4 +1,4 @@
-package LAB01;
+package hust.soict.hedspi.lab01;
 import java.util.Scanner;
 // Edited for refactor requirement
 public class MatrixAddition {

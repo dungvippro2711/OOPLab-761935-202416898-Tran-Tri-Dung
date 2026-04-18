@@ -1,4 +1,4 @@
-package LAB01;
+package hust.soict.hedspi.lab01;
 public class helloworld {
     
 public static void main(String args[]){
