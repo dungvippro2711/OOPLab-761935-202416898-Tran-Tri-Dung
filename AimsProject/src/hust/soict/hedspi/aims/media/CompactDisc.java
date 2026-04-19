@@ -1,20 +1,34 @@
 package hust.soict.hedspi.aims.media;
+
 import java.util.ArrayList;
 
-public class CompactDisc extends Disc implements Playable {
+public class CompactDisc extends Disc {
     private String artist;
-    private ArrayList<Track> tracks = new ArrayList<>();
+    private ArrayList<Track> tracks = new ArrayList<Track>();
 
     public CompactDisc(String title, String category, String director, int length, float cost, String artist) {
         super(title, category, director, length, cost);
         this.artist = artist;
     }
 
+    public String getArtist() {
+        return artist;
+    }
+
     public void addTrack(Track track) {
         if (tracks.contains(track)) {
-            System.out.println("Track already exists!");
+            System.out.println("The track " + track.getTitle() + " is already in the CD.");
         } else {
             tracks.add(track);
+            System.out.println("Track " + track.getTitle() + " added.");
+        }
+    }
+
+    public void removeTrack(Track track) {
+        if (tracks.remove(track)) {
+            System.out.println("Track " + track.getTitle() + " removed.");
+        } else {
+            System.out.println("Track " + track.getTitle() + " does not exist in the CD.");
         }
     }
 
@@ -25,16 +39,5 @@ public class CompactDisc extends Disc implements Playable {
             totalLength += track.getLength();
         }
         return totalLength;
-    }
-
-    public void play() {
-        if (this.getLength() > 0) {
-            System.out.println("Playing CD: " + this.getTitle() + " by " + artist);
-            for (Track track : tracks) {
-                track.play();
-            }
-        } else {
-            System.err.println("ERROR: CD length is non-positive!");
-        }
     }
 }

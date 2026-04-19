@@ -1,8 +1,8 @@
 package hust.soict.hedspi.aims.media;
 
 public class Disc extends Media {
-    protected int length;
-    protected String director;
+    private int length;
+    private String director;
 
     public Disc(String title, String category, String director, int length, float cost) {
         super(title, category, cost);
@@ -10,6 +10,11 @@ public class Disc extends Media {
         this.length = length;
     }
 
-    public int getLength() { return length; }
-    public String getDirector() { return director; }
+    public int getLength() {
+        return length;
+    }
+
+    public String getDirector() {
+        return director;
+    }
 }
