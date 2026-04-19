@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PolymorphismTest",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.media.PolymorphismTest",
+            "projectName": "java vs_80ba159a"
+        },
+        {
+            "type": "java",
             "name": "Aims",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.aims.Aims",
