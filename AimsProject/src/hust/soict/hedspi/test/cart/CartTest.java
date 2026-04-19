@@ -10,9 +10,10 @@ public class CartTest {
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("Batman", "Action", 15f);
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Superman", "Action", 18f);
 
-        cart.addDigitalVideoDisc(dvd1, dvd2);
+        cart.addMedia(dvd1, dvd2);
 
         cart.print();
+
         cart.searchByTitle("man");
         cart.searchById(dvd1.getId());
     }

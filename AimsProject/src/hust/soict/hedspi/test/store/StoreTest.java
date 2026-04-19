@@ -1,4 +1,5 @@
 package hust.soict.hedspi.test.store;
+
 import hust.soict.hedspi.aims.media.DigitalVideoDisc;
 import hust.soict.hedspi.aims.store.Store;
 
@@ -10,11 +11,13 @@ public class StoreTest {
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", 18.99f);
 
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        // Đổi addDVD thành addMedia
+        store.addMedia(dvd1);
+        store.addMedia(dvd2);
+        store.addMedia(dvd3);
 
-        store.removeDVD(dvd2);
-        store.removeDVD(new DigitalVideoDisc("Avatar")); 
+        // Đổi removeDVD thành removeMedia
+        store.removeMedia(dvd2);
+        store.removeMedia(new DigitalVideoDisc("Avatar"));
     }
 }
