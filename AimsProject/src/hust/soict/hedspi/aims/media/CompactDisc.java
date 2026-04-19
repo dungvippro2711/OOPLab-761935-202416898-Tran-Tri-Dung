@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class CompactDisc extends Disc implements Playable {
     private String artist;
-    private ArrayList<Track> tracks = new ArrayList<Track>();
+    private ArrayList<Track> tracks;
 
     public CompactDisc(String title, String category, String director, int length, float cost, String artist) {
         super(title, category, director, length, cost);
         this.artist = artist;
+        this.tracks = new ArrayList<Track>();
     }
 
     public String getArtist() {
@@ -16,10 +17,10 @@ public class CompactDisc extends Disc implements Playable {
     }
 
     public void addTrack(Track track) {
-        if (tracks.contains(track)) {
-            System.out.println("The track " + track.getTitle() + " is already in the CD.");
-        } else {
+        if (!tracks.contains(track)) {
             tracks.add(track);
+        } else {
+            System.out.println("Track already exists.");
         }
     }
 
@@ -27,7 +28,7 @@ public class CompactDisc extends Disc implements Playable {
         if (tracks.contains(track)) {
             tracks.remove(track);
         } else {
-            System.out.println("The track " + track.getTitle() + " does not exist.");
+            System.out.println("Track does not exist.");
         }
     }
 
@@ -43,7 +44,6 @@ public class CompactDisc extends Disc implements Playable {
     @Override
     public void play() {
         System.out.println("Playing CD: " + this.getTitle() + " by " + this.getArtist());
-        System.out.println("Total length: " + this.getLength());
         for (Track track : tracks) {
             track.play();
         }
