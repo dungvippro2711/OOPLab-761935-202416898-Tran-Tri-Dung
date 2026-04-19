@@ -18,8 +18,36 @@ public abstract class Media {
         this.title = title;
     }
 
-    public String getTitle() { return title; }
-    public String getCategory() { return category; }
-    public float getCost() { return cost; }
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || !(o instanceof Media)) return false;
+        Media media = (Media) o;
+        try {
+            return title != null && title.equalsIgnoreCase(media.getTitle());
+        } catch (NullPointerException e) {
+            return false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Media: " + title + " - Category: " + category + " - Cost: " + cost + "$";
+    }
 }

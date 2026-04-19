@@ -24,10 +24,10 @@ public class Track implements Playable {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Track track = (Track) obj;
-        return length == track.length && (title != null && title.equals(track.title));
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || !(o instanceof Track)) return false;
+        Track track = (Track) o;
+        return length == track.length && (title != null && title.equalsIgnoreCase(track.getTitle()));
     }
 }
