@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.aims.Aims",
+            "projectName": "java vs_80ba159a"
+        },
+        {
+            "type": "java",
             "name": "GarbageCreator",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.garbage.GarbageCreator",
