@@ -1,4 +1,4 @@
-package hust.soict.hedspi.aims.cart;
+package hust.soict.hedspi.test.cart;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,6 +11,12 @@ public class Cart {
         if (!itemsOrdered.contains(media)) {
             itemsOrdered.add(media);
             System.out.println("Added: " + media.getTitle());
+        }
+    }
+
+    public void addMedia(Media... mediaList) {
+        for (Media media : mediaList) {
+            addMedia(media);
         }
     }
 
@@ -55,7 +61,7 @@ public class Cart {
 
     public void searchByTitle(String title) {
         for (Media m : itemsOrdered) {
-            if (m.getTitle().equalsIgnoreCase(title)) {
+            if (m.getTitle().toLowerCase().contains(title.toLowerCase())) {
                 System.out.println(m.toString());
             }
         }

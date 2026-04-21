@@ -9,17 +9,27 @@ public class Store {
     public void addMedia(Media media) {
         if (!itemsInStore.contains(media)) {
             itemsInStore.add(media);
-            System.out.println("The media " + media.getTitle() + " has been added to the store.");
-        } else {
-            System.out.println("The media is already in the store.");
         }
     }
 
     public void removeMedia(Media media) {
-        if (itemsInStore.remove(media)) {
-            System.out.println("The media " + media.getTitle() + " has been removed from the store.");
-        } else {
-            System.out.println("The media is not in the store.");
+        itemsInStore.remove(media);
+    }
+
+    public void print() {
+        System.out.println("\n***********************STORE***********************");
+        for (int i = 0; i < itemsInStore.size(); i++) {
+            System.out.println((i + 1) + ". " + itemsInStore.get(i).toString());
         }
+        System.out.println("***************************************************");
+    }
+
+    public Media search(String title) {
+        for (Media m : itemsInStore) {
+            if (m.getTitle().equalsIgnoreCase(title)) {
+                return m;
+            }
+        }
+        return null;
     }
 }
