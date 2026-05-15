@@ -16,3 +16,19 @@ Không, nếu sử dụng Comparable,ta chỉ có thể định nghĩa một quy
 4.  Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
 
 Trong trường hợp này, ta cần override lại phương thức compareTo() trong lớp con DigitalVideoDisc:
+
+
+
+LAB04 ANSWER:
+1. Top-level container:
+   - AWT: Frame (heavyweight, phụ thuộc nền tảng)
+   - Swing: JFrame (lightweight, thuần Java)
+2. Tên component:
+   - AWT: TextField, Label, Button, ...
+   - Swing: JTextField, JLabel, JButton, ... (có tiền tố J)
+3. Xử lý sự kiện:
+   - Cả hai đều dùng ActionListener, nhưng Swing có thêm các listener khác (ChangeListener, ...)
+   - Cách đăng ký giống nhau: component.addActionListener(listener)
+4. Giao diện:
+   - AWT hiển thị theo từng nền tảng (Windows, Mac, Linux)
+   - Swing hiển thị nhất quán hơn, có thể thay đổi Look and Feel

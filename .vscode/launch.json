@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SwingAccumulator",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.swing.SwingAccumulator",
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e"
+        },
+        {
+            "type": "java",
+            "name": "NumberGrid",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.swing.NumberGrid",
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e"
+        },
+        {
+            "type": "java",
             "name": "PolymorphismTest",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.test.media.PolymorphismTest",
