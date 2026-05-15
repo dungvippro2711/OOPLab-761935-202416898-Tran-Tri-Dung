@@ -1,0 +1,15 @@
+14.1
+Trả lời: Nên ưu tiên sử dụng phương pháp truyền số lượng đối số tùy ý (Varargs - sử dụng dấu ...) hơn là dùng mảng ([]).
+Vì:
+Tính tiện lợi và code sạch hơn (Clean Code): 
+Với Varargs, khi gọi hàm ở main, chỉ cần truyền trực tiếp các đối tượng cách nhau bằng dấu phẩy: anOrder.addDigitalVideoDisc(dvd1, dvd2, dvd3);. 
+Nếu dùng mảng, bắt buộc phải viết code khởi tạo một mảng mới rồi mới nhét mảng đó vào hàm, khiến code bị dài dòng không cần thiết.
+Tính bao hàm: Hàm sử dụng Varargs cực kỳ linh hoạt vì nó chấp nhận cả hai cách gọi: truyền từng tham số rời rạc hoặc truyền vào một mảng đã có sẵn.
+
+15
+Trả lời: Java luôn luôn là ngôn ngữ Truyền tham trị (Pass by Value).
+Giải thích chi tiết:
+Khi truyền một kiểu dữ liệu nguyên thủy (như int, float), Java tạo ra một bản copy của giá trị đó và đưa vào hàm.
+Khi truyền một đối tượng (Object) (ví dụ biến jungleDVD), Java không đưa cả cái đối tượng to đùng đó vào hàm. Thay vào đó, nó tạo ra một bản sao của cái địa chỉ bộ nhớ (copy of the reference) đang trỏ tới đối tượng đó, rồi đưa bản sao địa chỉ này vào hàm.
+Lý do hàm swap thất bại: Trong hàm swap, thực chất chỉ đang tráo đổi hai "bản sao địa chỉ" với nhau. Khi hàm swap kết thúc, các bản sao này bị hủy đi. Những biến gốc ở ngoài hàm main vẫn cầm địa chỉ cũ không hề thay đổi.
+Lý do hàm changeTitle thành công: Dù chỉ là "bản sao địa chỉ", nhưng nó vẫn trỏ đúng về vị trí của đối tượng thật trong bộ nhớ Heap. Do đó, thông qua bản sao này, bạn có thể gọi các phương thức (như setTitle) để chui vào bên trong và thay đổi dữ liệu của chính đối tượng đó.
