@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StoreManagerScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.aims.screen.manager.StoreManagerScreen",
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e"
+        },
+        {
+            "type": "java",
             "name": "SwingAccumulator",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.swing.SwingAccumulator",
