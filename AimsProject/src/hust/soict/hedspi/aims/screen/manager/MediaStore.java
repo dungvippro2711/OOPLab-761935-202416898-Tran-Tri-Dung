@@ -17,15 +17,26 @@ public class MediaStore extends JPanel {
         title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 15));
         title.setAlignmentX(CENTER_ALIGNMENT);
 
-        JLabel cost = new JLabel("" + media.getCost() + " $");
+        JLabel cost = new JLabel(media.getCost() + " $");
         cost.setAlignmentX(CENTER_ALIGNMENT);
 
         JPanel container = new JPanel();
         container.setLayout(new FlowLayout(FlowLayout.CENTER));
+
         if (media instanceof Playable) {
             JButton playButton = new JButton("Play");
+            playButton.addActionListener(e -> {
+                JDialog dialog = new JDialog();
+                dialog.setTitle("Playing");
+                dialog.setSize(300, 150);
+                dialog.setLocationRelativeTo(null);
+                JLabel msg = new JLabel("Playing: " + media.getTitle(), SwingConstants.CENTER);
+                dialog.add(msg);
+                dialog.setVisible(true);
+                // Hoặc gọi media.play() nếu có
+                // ((Playable) media).play();
+            });
             container.add(playButton);
-            // TODO: thêm ActionListener cho playButton
         }
 
         add(Box.createVerticalGlue());
