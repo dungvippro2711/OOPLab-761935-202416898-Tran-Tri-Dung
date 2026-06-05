@@ -2,57 +2,67 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Painter",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.javafx.Painter",
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_78cca9ac",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
             "name": "StoreManagerScreen",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.aims.screen.manager.StoreManagerScreen",
-            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e"
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "SwingAccumulator",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.swing.SwingAccumulator",
-            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e"
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "NumberGrid",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.swing.NumberGrid",
-            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e"
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_287a5b8e",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "PolymorphismTest",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.test.media.PolymorphismTest",
-            "projectName": "java vs_80ba159a"
+            "projectName": "java vs_80ba159a",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "Aims",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.aims.Aims",
-            "projectName": "java vs_80ba159a"
+            "projectName": "java vs_80ba159a",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-17.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "GarbageCreator",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.garbage.GarbageCreator",
-            "projectName": "java vs_80ba159a"
+            "projectName": "java vs_80ba159a",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-26.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "CartTest",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.test.cart.CartTest",
-            "projectName": "java vs_80ba159a"
-        },
-        "name",
-        "type",
-        "request",
-        "program",
-        "console"
+            "projectName": "java vs_80ba159a",
+            "vmArgs": "--module-path \"C:/Users/PC/Downloads/javafx-sdk-26.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
     ]
 }
