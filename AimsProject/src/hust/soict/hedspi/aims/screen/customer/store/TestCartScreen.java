@@ -1,0 +1,38 @@
+package hust.soict.hedspi.aims.screen.customer.store;
+
+import hust.soict.hedspi.aims.cart.Cart;
+import hust.soict.hedspi.aims.media.DigitalVideoDisc;
+import hust.soict.hedspi.aims.screen.customer.controller.CartController;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class TestCartScreen extends Application {
+    private static Cart cart;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        final String CART_FXML_FILE_PATH = "/hust/soict/hedspi/aims/screen/customer/view/Cart.fxml";
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
+        CartController cartController = new CartController(cart);
+        fxmlLoader.setController(cartController);
+        Parent root = fxmlLoader.load();
+
+        primaryStage.setTitle("Cart");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        cart = new Cart();
+        
+        // Add some items to cart here to test
+        cart.addMedia(new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f));
+        cart.addMedia(new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f));
+        cart.addMedia(new DigitalVideoDisc("Aladdin", "Animation", "John Musker", 90, 18.99f));
+        
+        launch(args);
+    }
+}
