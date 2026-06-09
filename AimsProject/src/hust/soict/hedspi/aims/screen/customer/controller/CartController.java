@@ -6,6 +6,7 @@ import hust.soict.hedspi.aims.media.Playable;
 import hust.soict.hedspi.aims.store.Store;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Alert;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.collections.transformation.FilteredList;
@@ -80,6 +82,11 @@ public class CartController {
             tblMedia.setItems(cart.getItemsOrdered());
         }
 
+        costLabel.setText(cart.totalCost() + " $");
+        cart.getItemsOrdered().addListener((ListChangeListener.Change<? extends Media> c) -> {
+            costLabel.setText(cart.totalCost() + " $");
+        });
+
         btnPlay.setVisible(false);
         btnRemove.setVisible(false);
 
@@ -132,7 +139,14 @@ public class CartController {
 
     @FXML
     void btnPlayPressed(ActionEvent event) {
-        // TODO: play
+        Media media = tblMedia.getSelectionModel().getSelectedItem();
+        if (media != null) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Playing Media");
+            alert.setHeaderText(null);
+            alert.setContentText("Playing: " + media.getTitle());
+            alert.showAndWait();
+        }
     }
 
     @FXML
@@ -159,6 +173,11 @@ public class CartController {
     
     @FXML
     void btnPlaceOrderPressed(ActionEvent event) {
-        // TODO: Place order
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Order placed");
+        alert.setHeaderText(null);
+        alert.setContentText("Your order has been placed successfully!");
+        alert.showAndWait();
+        cart.clear();
     }
 }
