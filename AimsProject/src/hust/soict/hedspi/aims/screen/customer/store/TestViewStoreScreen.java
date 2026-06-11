@@ -31,18 +31,10 @@ public class TestViewStoreScreen extends Application {
         store = new Store();
         cart = new Cart();
         
-        // Add some items to store here
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin", "Animation", "John Musker", 90, 18.99f);
-        
-        store.addMedia(dvd1);
-        store.addMedia(dvd2);
-        store.addMedia(dvd3);
-        
-        cart.addMedia(dvd1);
-        cart.addMedia(dvd2);
-        cart.addMedia(dvd3);
+        // Add 21 items to store to test LimitExceededException
+        for (int i = 1; i <= 21; i++) {
+            store.addMedia(new DigitalVideoDisc("Test DVD " + i, "Animation", "Director", 87, 19.95f));
+        }
         
         launch(args);
     }

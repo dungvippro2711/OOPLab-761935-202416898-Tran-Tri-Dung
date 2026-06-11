@@ -12,6 +12,9 @@ public abstract class Media {
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
 
     public Media(String title, String category, float cost) {
+        if (cost < 0) {
+            throw new IllegalArgumentException("ERROR: Cost cannot be negative!");
+        }
         this.title = title;
         this.category = category;
         this.cost = cost;

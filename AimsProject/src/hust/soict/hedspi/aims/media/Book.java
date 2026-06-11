@@ -21,6 +21,9 @@ public class Book extends Media {
     }
 
     public void removeAuthor(String authorName) {
+        if (!authors.contains(authorName)) {
+            throw new IllegalArgumentException("ERROR: Author is not present!");
+        }
         authors.remove(authorName);
     }
 

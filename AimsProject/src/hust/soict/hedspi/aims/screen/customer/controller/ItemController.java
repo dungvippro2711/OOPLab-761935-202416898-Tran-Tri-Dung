@@ -43,7 +43,20 @@ public class ItemController {
 
     @FXML
     void btnAddToCartClicked(ActionEvent event) {
-        cart.addMedia(media);
+        try {
+            cart.addMedia(media);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText(null);
+            alert.setContentText("Item added to cart successfully!");
+            alert.showAndWait();
+        } catch (hust.soict.hedspi.aims.exception.LimitExceededException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Cart is full");
+            alert.setHeaderText(null);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+        }
     }
 
     @FXML

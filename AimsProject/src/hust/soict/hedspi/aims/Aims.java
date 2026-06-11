@@ -101,7 +101,11 @@ public class Aims {
                 scanner.nextLine();
                 switch (choice) {
                     case 1:
-                        cart.addMedia(media);
+                        try {
+                            cart.addMedia(media);
+                        } catch (hust.soict.hedspi.aims.exception.LimitExceededException e) {
+                            System.out.println(e.getMessage());
+                        }
                         break;
                     case 2:
                         if (media instanceof Playable) {
@@ -134,8 +138,12 @@ public class Aims {
         String title = scanner.nextLine();
         Media media = store.search(title);
         if (media != null) {
-            cart.addMedia(media);
-            System.out.println("Current items in cart: " + cart.getCount());
+            try {
+                cart.addMedia(media);
+                System.out.println("Current items in cart: " + cart.getCount());
+            } catch (hust.soict.hedspi.aims.exception.LimitExceededException e) {
+                System.out.println(e.getMessage());
+            }
         } else {
             System.out.println("Media not found.");
         }
