@@ -5,6 +5,8 @@ import java.util.Scanner;
 import hust.soict.hedspi.aims.cart.Cart;
 import hust.soict.hedspi.aims.media.*;
 import hust.soict.hedspi.aims.store.Store;
+import hust.soict.hedspi.aims.exception.PlayerException;
+import javax.swing.JOptionPane;
 
 public class Aims {
     private static Store store = new Store();
@@ -109,7 +111,13 @@ public class Aims {
                         break;
                     case 2:
                         if (media instanceof Playable) {
-                            ((Playable) media).play();
+                            try {
+                                ((Playable) media).play();
+                            } catch (PlayerException e) {
+                                System.out.println(e.toString());
+                                e.printStackTrace();
+                                JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                            }
                         } else {
                             System.out.println("This media cannot be played.");
                         }
@@ -154,7 +162,13 @@ public class Aims {
         String title = scanner.nextLine();
         Media media = store.search(title);
         if (media instanceof Playable) {
-            ((Playable) media).play();
+            try {
+                ((Playable) media).play();
+            } catch (PlayerException e) {
+                System.out.println(e.toString());
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
             System.out.println("This media cannot be played.");
         }
@@ -261,12 +275,21 @@ public class Aims {
         System.out.print("Enter title: ");
         String title = scanner.nextLine();
         Media m = cart.search(title);
-        if (m instanceof Playable) ((Playable) m).play();
+        if (m instanceof Playable) {
+            try {
+                ((Playable) m).play();
+            } catch (PlayerException e) {
+                System.out.println(e.toString());
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }
 
     private static void initSetup() {
         store.addMedia(new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f));
         store.addMedia(new DigitalVideoDisc("Star Wars", "Sci-Fi", "George Lucas", 124, 24.95f));
         store.addMedia(new Book("Java Programming", "Education", 15.5f));
+        store.addMedia(new DigitalVideoDisc("Test Error DVD", "Test", "Tester", 0, 1.0f));
     }
 }

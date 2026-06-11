@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.aims.Aims",
+            "projectName": "OOPLab-761935-202416898-Tran-Tri-Dung_78cca9ac"
+        },
+        {
+            "type": "java",
             "name": "TestCartScreen",
             "request": "launch",
             "mainClass": "hust.soict.hedspi.aims.screen.customer.store.TestCartScreen",
