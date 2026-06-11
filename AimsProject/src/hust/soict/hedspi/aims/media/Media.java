@@ -2,7 +2,7 @@ package hust.soict.hedspi.aims.media;
 
 import java.util.Comparator;
 
-public abstract class Media {
+public abstract class Media implements Comparable<Media> {
     private int id;
     private String title;
     private String category;
@@ -44,12 +44,28 @@ public abstract class Media {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || !(o instanceof Media)) return false;
-        Media media = (Media) o;
+        if (!(o instanceof Media)) return false;
         try {
-            return title != null && title.equalsIgnoreCase(media.getTitle());
-        } catch (NullPointerException e) {
+            Media media = (Media) o;
+            boolean titleEquals = (this.title != null) && this.title.equalsIgnoreCase(media.getTitle());
+            boolean costEquals = (Float.compare(this.cost, media.getCost()) == 0);
+            return titleEquals && costEquals;
+        } catch (NullPointerException | ClassCastException e) {
             return false;
+        }
+    }
+
+    @Override
+    public int compareTo(Media other) {
+        try {
+            int titleComparison = this.title.compareToIgnoreCase(other.getTitle());
+            if (titleComparison != 0) {
+                return titleComparison;
+            } else {
+                return Float.compare(this.cost, other.getCost());
+            }
+        } catch (NullPointerException e) {
+            return 1;
         }
     }
 
