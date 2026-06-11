@@ -36,6 +36,9 @@ public class TestViewStoreScreen extends Application {
             store.addMedia(new DigitalVideoDisc("Test DVD " + i, "Animation", "Director", 87, 19.95f));
         }
         
+        // Add a DVD with length 0 to test PlayerException (Phần 11)
+        store.addMedia(new DigitalVideoDisc("Error DVD (Test Part 11)", "Test", "Tester", 0, 1.0f));
+        
         launch(args);
     }
 }

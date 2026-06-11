@@ -129,6 +129,9 @@ public class StoreManagerScreen extends JFrame {
         }
         store.addMedia(new Book("Java Programming", "Education", 15.5f));
         store.addMedia(new CompactDisc("Thriller", "Music", "John Landis", 42, 19.99f, "Michael Jackson"));
+        
+        // Add a DVD with length 0 to test PlayerException (Phần 11)
+        store.addMedia(new DigitalVideoDisc("Error DVD (Test Part 11)", "Test", "Tester", 0, 1.0f));
         new StoreManagerScreen(store);
     }
 }

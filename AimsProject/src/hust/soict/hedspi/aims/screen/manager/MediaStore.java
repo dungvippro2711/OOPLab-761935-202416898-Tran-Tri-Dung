@@ -26,15 +26,19 @@ public class MediaStore extends JPanel {
         if (media instanceof Playable) {
             JButton playButton = new JButton("Play");
             playButton.addActionListener(e -> {
-                JDialog dialog = new JDialog();
-                dialog.setTitle("Playing");
-                dialog.setSize(300, 150);
-                dialog.setLocationRelativeTo(null);
-                JLabel msg = new JLabel("Playing: " + media.getTitle(), SwingConstants.CENTER);
-                dialog.add(msg);
-                dialog.setVisible(true);
-                // Hoặc gọi media.play() nếu có
-                // ((Playable) media).play();
+                try {
+                    ((Playable) media).play();
+                    JDialog dialog = new JDialog();
+                    dialog.setTitle("Playing");
+                    dialog.setSize(300, 150);
+                    dialog.setLocationRelativeTo(null);
+                    JLabel msg = new JLabel("Playing: " + media.getTitle(), SwingConstants.CENTER);
+                    dialog.add(msg);
+                    dialog.setVisible(true);
+                } catch (hust.soict.hedspi.aims.exception.PlayerException ex) {
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Illegal DVD Length", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
             });
             container.add(playButton);
         }

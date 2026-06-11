@@ -61,11 +61,23 @@ public class ItemController {
 
     @FXML
     void btnPlayClicked(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Playing Media");
-        alert.setHeaderText(null);
-        alert.setContentText("Playing: " + media.getTitle());
-        alert.showAndWait();
+        try {
+            if (media instanceof Playable) {
+                ((Playable) media).play();
+            }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Playing Media");
+            alert.setHeaderText(null);
+            alert.setContentText("Playing: " + media.getTitle());
+            alert.showAndWait();
+        } catch (hust.soict.hedspi.aims.exception.PlayerException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Illegal DVD Length");
+            alert.setHeaderText(null);
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+            e.printStackTrace();
+        }
     }
 
 }
